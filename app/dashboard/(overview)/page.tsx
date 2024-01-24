@@ -10,8 +10,11 @@ import {
   LatestInvoicesSkeleton,
   CardsSkeleton,
 } from '@/app/ui/skeletons';
+
+import Sprig from '@/app/ui/sprig'
  
 export default async function Page() {
+
   const {
     numberOfInvoices,
     numberOfCustomers,
@@ -20,6 +23,7 @@ export default async function Page() {
   } = await fetchCardData();
   return (
     <main>
+      <Sprig />
       <h1 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
         Dashboard
       </h1>
